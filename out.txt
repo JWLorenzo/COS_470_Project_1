@@ -1,0 +1,2008 @@
+-----Turn 1-----
+Turn: 1
+   Start:    17,1
+   Percepts: (X ['g']) (N ['w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      17,2
+-----Turn 2-----
+Turn: 2
+   Start:    17,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      17,3
+-----Turn 3-----
+Turn: 3
+   Start:    17,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  E
+   End:      18,3
+-----Turn 4-----
+Turn: 4
+   Start:    18,3
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'w']) 
+   Command:  E
+   End:      19,3
+-----Turn 5-----
+Turn: 5
+   Start:    19,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  N
+   End:      19,2
+-----Turn 6-----
+Turn: 6
+   Start:    19,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      19,1
+-----Turn 7-----
+Turn: 7
+   Start:    19,1
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  E
+   End:      20,1
+-----Turn 8-----
+Turn: 8
+   Start:    20,1
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  E
+   End:      21,1
+-----Turn 9-----
+Turn: 9
+   Start:    21,1
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  E
+   End:      22,1
+-----Turn 10-----
+Turn: 10
+   Start:    22,1
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      23,1
+-----Turn 11-----
+Turn: 11
+   Start:    23,1
+   Percepts: (X ['g']) (N ['w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      23,2
+-----Turn 12-----
+Turn: 12
+   Start:    23,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      23,3
+-----Turn 13-----
+Turn: 13
+   Start:    23,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      23,4
+-----Turn 14-----
+Turn: 14
+   Start:    23,4
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      23,5
+-----Turn 15-----
+Turn: 15
+   Start:    23,5
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  S
+   End:      23,6
+-----Turn 16-----
+Turn: 16
+   Start:    23,6
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      23,7
+-----Turn 17-----
+Turn: 17
+   Start:    23,7
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      24,7
+-----Turn 18-----
+Turn: 18
+   Start:    24,7
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      25,7
+-----Turn 19-----
+Turn: 19
+   Start:    25,7
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      26,7
+-----Turn 20-----
+Turn: 20
+   Start:    26,7
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      26,6
+-----Turn 21-----
+Turn: 21
+   Start:    26,6
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      26,5
+-----Turn 22-----
+Turn: 22
+   Start:    26,5
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  E
+   End:      27,5
+-----Turn 23-----
+Turn: 23
+   Start:    27,5
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'w']) 
+   Command:  N
+   End:      27,4
+-----Turn 24-----
+Turn: 24
+   Start:    27,4
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'w']) (W ['w']) 
+   Command:  N
+   End:      27,3
+-----Turn 25-----
+Turn: 25
+   Start:    27,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  N
+   End:      27,2
+-----Turn 26-----
+Turn: 26
+   Start:    27,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  N
+   End:      27,1
+-----Turn 27-----
+Turn: 27
+   Start:    27,1
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  E
+   End:      28,1
+-----Turn 28-----
+Turn: 28
+   Start:    28,1
+   Percepts: (X ['g']) (N ['w']) (E ['w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      28,2
+-----Turn 29-----
+Turn: 29
+   Start:    28,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      29,2
+-----Turn 30-----
+Turn: 30
+   Start:    29,2
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      30,2
+-----Turn 31-----
+Turn: 31
+   Start:    30,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      30,1
+-----Turn 32-----
+Turn: 32
+   Start:    30,1
+   Percepts: (X ['g']) (N ['w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      30,2
+-----Turn 33-----
+Turn: 33
+   Start:    30,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      30,3
+-----Turn 34-----
+Turn: 34
+   Start:    30,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      30,4
+-----Turn 35-----
+Turn: 35
+   Start:    30,4
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'w']) (W ['w']) 
+   Command:  S
+   End:      30,5
+-----Turn 36-----
+Turn: 36
+   Start:    30,5
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      29,5
+-----Turn 37-----
+Turn: 37
+   Start:    29,5
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      29,6
+-----Turn 38-----
+Turn: 38
+   Start:    29,6
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      29,7
+-----Turn 39-----
+Turn: 39
+   Start:    29,7
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  E
+   End:      30,7
+-----Turn 40-----
+Turn: 40
+   Start:    30,7
+   Percepts: (X ['g']) (N ['w']) (E ['w']) (S ['g', 'w']) (W ['g', 'w']) 
+   Command:  S
+   End:      30,8
+-----Turn 41-----
+Turn: 41
+   Start:    30,8
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['w']) (W ['g', 'w']) 
+   Command:  W
+   End:      29,8
+-----Turn 42-----
+Turn: 42
+   Start:    29,8
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['w']) (W ['w']) 
+   Command:  E
+   End:      30,8
+-----Turn 43-----
+Turn: 43
+   Start:    30,8
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['w']) (W ['g', 'w']) 
+   Command:  N
+   End:      30,7
+-----Turn 44-----
+Turn: 44
+   Start:    30,7
+   Percepts: (X ['g']) (N ['w']) (E ['w']) (S ['g', 'w']) (W ['g', 'w']) 
+   Command:  W
+   End:      29,7
+-----Turn 45-----
+Turn: 45
+   Start:    29,7
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  N
+   End:      29,6
+-----Turn 46-----
+Turn: 46
+   Start:    29,6
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      29,5
+-----Turn 47-----
+Turn: 47
+   Start:    29,5
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      28,5
+-----Turn 48-----
+Turn: 48
+   Start:    28,5
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      29,5
+-----Turn 49-----
+Turn: 49
+   Start:    29,5
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      30,5
+-----Turn 50-----
+Turn: 50
+   Start:    30,5
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      30,4
+-----Turn 51-----
+Turn: 51
+   Start:    30,4
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'w']) (W ['w']) 
+   Command:  N
+   End:      30,3
+-----Turn 52-----
+Turn: 52
+   Start:    30,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      30,2
+-----Turn 53-----
+Turn: 53
+   Start:    30,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      29,2
+-----Turn 54-----
+Turn: 54
+   Start:    29,2
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      28,2
+-----Turn 55-----
+Turn: 55
+   Start:    28,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      28,3
+-----Turn 56-----
+Turn: 56
+   Start:    28,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['w']) (S ['w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      28,2
+-----Turn 57-----
+Turn: 57
+   Start:    28,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      28,1
+-----Turn 58-----
+Turn: 58
+   Start:    28,1
+   Percepts: (X ['g']) (N ['w']) (E ['w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      27,1
+-----Turn 59-----
+Turn: 59
+   Start:    27,1
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  W
+   End:      26,1
+-----Turn 60-----
+Turn: 60
+   Start:    26,1
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  S
+   End:      26,2
+-----Turn 61-----
+Turn: 61
+   Start:    26,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'w']) 
+   Command:  S
+   End:      26,3
+-----Turn 62-----
+Turn: 62
+   Start:    26,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['w']) (W ['g', 'w']) 
+   Command:  W
+   End:      25,3
+-----Turn 63-----
+Turn: 63
+   Start:    25,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['w']) (W ['w']) 
+   Command:  N
+   End:      25,2
+-----Turn 64-----
+Turn: 64
+   Start:    25,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  N
+   End:      25,1
+-----Turn 65-----
+Turn: 65
+   Start:    25,1
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      25,2
+-----Turn 66-----
+Turn: 66
+   Start:    25,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  S
+   End:      25,3
+-----Turn 67-----
+Turn: 67
+   Start:    25,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['w']) (W ['w']) 
+   Command:  E
+   End:      26,3
+-----Turn 68-----
+Turn: 68
+   Start:    26,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['w']) (W ['g', 'w']) 
+   Command:  N
+   End:      26,2
+-----Turn 69-----
+Turn: 69
+   Start:    26,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'w']) 
+   Command:  N
+   End:      26,1
+-----Turn 70-----
+Turn: 70
+   Start:    26,1
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  E
+   End:      27,1
+-----Turn 71-----
+Turn: 71
+   Start:    27,1
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      27,2
+-----Turn 72-----
+Turn: 72
+   Start:    27,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      27,3
+-----Turn 73-----
+Turn: 73
+   Start:    27,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      27,4
+-----Turn 74-----
+Turn: 74
+   Start:    27,4
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'w']) (W ['w']) 
+   Command:  S
+   End:      27,5
+-----Turn 75-----
+Turn: 75
+   Start:    27,5
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'w']) 
+   Command:  W
+   End:      26,5
+-----Turn 76-----
+Turn: 76
+   Start:    26,5
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  W
+   End:      25,5
+-----Turn 77-----
+Turn: 77
+   Start:    25,5
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'w']) (S ['w']) (W ['w']) 
+   Command:  E
+   End:      26,5
+-----Turn 78-----
+Turn: 78
+   Start:    26,5
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  S
+   End:      26,6
+-----Turn 79-----
+Turn: 79
+   Start:    26,6
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      26,7
+-----Turn 80-----
+Turn: 80
+   Start:    26,7
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      27,7
+-----Turn 81-----
+Turn: 81
+   Start:    27,7
+   Percepts: (X ['g']) (N ['w']) (E ['w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      27,8
+-----Turn 82-----
+Turn: 82
+   Start:    27,8
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      27,9
+-----Turn 83-----
+Turn: 83
+   Start:    27,9
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['w']) (S ['w']) (W ['g', 'g', 'w']) 
+   Command:  W
+   End:      26,9
+-----Turn 84-----
+Turn: 84
+   Start:    26,9
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['w']) (W ['g', 'w']) 
+   Command:  N
+   End:      26,8
+-----Turn 85-----
+Turn: 85
+   Start:    26,8
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'w']) (W ['g', 'w']) 
+   Command:  W
+   End:      25,8
+-----Turn 86-----
+Turn: 86
+   Start:    25,8
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  S
+   End:      25,9
+-----Turn 87-----
+Turn: 87
+   Start:    25,9
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['w']) (W ['w']) 
+   Command:  N
+   End:      25,8
+-----Turn 88-----
+Turn: 88
+   Start:    25,8
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  E
+   End:      26,8
+-----Turn 89-----
+Turn: 89
+   Start:    26,8
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'w']) (W ['g', 'w']) 
+   Command:  S
+   End:      26,9
+-----Turn 90-----
+Turn: 90
+   Start:    26,9
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['w']) (W ['g', 'w']) 
+   Command:  E
+   End:      27,9
+-----Turn 91-----
+Turn: 91
+   Start:    27,9
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['w']) (S ['w']) (W ['g', 'g', 'w']) 
+   Command:  N
+   End:      27,8
+-----Turn 92-----
+Turn: 92
+   Start:    27,8
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  N
+   End:      27,7
+-----Turn 93-----
+Turn: 93
+   Start:    27,7
+   Percepts: (X ['g']) (N ['w']) (E ['w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      26,7
+-----Turn 94-----
+Turn: 94
+   Start:    26,7
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      25,7
+-----Turn 95-----
+Turn: 95
+   Start:    25,7
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      24,7
+-----Turn 96-----
+Turn: 96
+   Start:    24,7
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      23,7
+-----Turn 97-----
+Turn: 97
+   Start:    23,7
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      23,8
+-----Turn 98-----
+Turn: 98
+   Start:    23,8
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      23,9
+-----Turn 99-----
+Turn: 99
+   Start:    23,9
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      22,9
+-----Turn 100-----
+Turn: 100
+   Start:    22,9
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      22,8
+-----Turn 101-----
+Turn: 101
+   Start:    22,8
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      22,7
+-----Turn 102-----
+Turn: 102
+   Start:    22,7
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      22,6
+-----Turn 103-----
+Turn: 103
+   Start:    22,6
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      22,5
+-----Turn 104-----
+Turn: 104
+   Start:    22,5
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      22,4
+-----Turn 105-----
+Turn: 105
+   Start:    22,4
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      22,3
+-----Turn 106-----
+Turn: 106
+   Start:    22,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      22,2
+-----Turn 107-----
+Turn: 107
+   Start:    22,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      21,2
+-----Turn 108-----
+Turn: 108
+   Start:    21,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      21,3
+-----Turn 109-----
+Turn: 109
+   Start:    21,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      21,4
+-----Turn 110-----
+Turn: 110
+   Start:    21,4
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'w']) 
+   Command:  W
+   End:      20,4
+-----Turn 111-----
+Turn: 111
+   Start:    20,4
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'w']) 
+   Command:  N
+   End:      20,3
+-----Turn 112-----
+Turn: 112
+   Start:    20,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      20,2
+-----Turn 113-----
+Turn: 113
+   Start:    20,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  S
+   End:      20,3
+-----Turn 114-----
+Turn: 114
+   Start:    20,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      20,4
+-----Turn 115-----
+Turn: 115
+   Start:    20,4
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'w']) 
+   Command:  W
+   End:      19,4
+-----Turn 116-----
+Turn: 116
+   Start:    19,4
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['w']) (W ['w']) 
+   Command:  E
+   End:      20,4
+-----Turn 117-----
+Turn: 117
+   Start:    20,4
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'w']) 
+   Command:  E
+   End:      21,4
+-----Turn 118-----
+Turn: 118
+   Start:    21,4
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'w']) 
+   Command:  N
+   End:      21,3
+-----Turn 119-----
+Turn: 119
+   Start:    21,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      21,2
+-----Turn 120-----
+Turn: 120
+   Start:    21,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  E
+   End:      22,2
+-----Turn 121-----
+Turn: 121
+   Start:    22,2
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      22,3
+-----Turn 122-----
+Turn: 122
+   Start:    22,3
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      22,4
+-----Turn 123-----
+Turn: 123
+   Start:    22,4
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      22,5
+-----Turn 124-----
+Turn: 124
+   Start:    22,5
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      22,6
+-----Turn 125-----
+Turn: 125
+   Start:    22,6
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      21,6
+-----Turn 126-----
+Turn: 126
+   Start:    21,6
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      21,7
+-----Turn 127-----
+Turn: 127
+   Start:    21,7
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      21,8
+-----Turn 128-----
+Turn: 128
+   Start:    21,8
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      21,9
+-----Turn 129-----
+Turn: 129
+   Start:    21,9
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'w']) 
+   Command:  W
+   End:      20,9
+-----Turn 130-----
+Turn: 130
+   Start:    20,9
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  N
+   End:      20,8
+-----Turn 131-----
+Turn: 131
+   Start:    20,8
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  N
+   End:      20,7
+-----Turn 132-----
+Turn: 132
+   Start:    20,7
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  N
+   End:      20,6
+-----Turn 133-----
+Turn: 133
+   Start:    20,6
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      19,6
+-----Turn 134-----
+Turn: 134
+   Start:    19,6
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      19,7
+-----Turn 135-----
+Turn: 135
+   Start:    19,7
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      19,8
+-----Turn 136-----
+Turn: 136
+   Start:    19,8
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  S
+   End:      19,9
+-----Turn 137-----
+Turn: 137
+   Start:    19,9
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['w']) (W ['w']) 
+   Command:  N
+   End:      19,8
+-----Turn 138-----
+Turn: 138
+   Start:    19,8
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  N
+   End:      19,7
+-----Turn 139-----
+Turn: 139
+   Start:    19,7
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      19,6
+-----Turn 140-----
+Turn: 140
+   Start:    19,6
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  W
+   End:      18,6
+-----Turn 141-----
+Turn: 141
+   Start:    18,6
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'w']) 
+   Command:  W
+   End:      17,6
+-----Turn 142-----
+Turn: 142
+   Start:    17,6
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      17,5
+-----Turn 143-----
+Turn: 143
+   Start:    17,5
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      17,4
+-----Turn 144-----
+Turn: 144
+   Start:    17,4
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      17,5
+-----Turn 145-----
+Turn: 145
+   Start:    17,5
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      16,5
+-----Turn 146-----
+Turn: 146
+   Start:    16,5
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      15,5
+-----Turn 147-----
+Turn: 147
+   Start:    15,5
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      15,6
+-----Turn 148-----
+Turn: 148
+   Start:    15,6
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      15,7
+-----Turn 149-----
+Turn: 149
+   Start:    15,7
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      15,8
+-----Turn 150-----
+Turn: 150
+   Start:    15,8
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      14,8
+-----Turn 151-----
+Turn: 151
+   Start:    14,8
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      14,7
+-----Turn 152-----
+Turn: 152
+   Start:    14,7
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      14,6
+-----Turn 153-----
+Turn: 153
+   Start:    14,6
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  N
+   End:      14,5
+-----Turn 154-----
+Turn: 154
+   Start:    14,5
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  W
+   End:      13,5
+-----Turn 155-----
+Turn: 155
+   Start:    13,5
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      13,6
+-----Turn 156-----
+Turn: 156
+   Start:    13,6
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      13,7
+-----Turn 157-----
+Turn: 157
+   Start:    13,7
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      13,8
+-----Turn 158-----
+Turn: 158
+   Start:    13,8
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      13,9
+-----Turn 159-----
+Turn: 159
+   Start:    13,9
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      13,10
+-----Turn 160-----
+Turn: 160
+   Start:    13,10
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      12,10
+-----Turn 161-----
+Turn: 161
+   Start:    12,10
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      12,9
+-----Turn 162-----
+Turn: 162
+   Start:    12,9
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'w']) (W ['g', 'w']) 
+   Command:  N
+   End:      12,8
+-----Turn 163-----
+Turn: 163
+   Start:    12,8
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  N
+   End:      12,7
+-----Turn 164-----
+Turn: 164
+   Start:    12,7
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      11,7
+-----Turn 165-----
+Turn: 165
+   Start:    11,7
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      11,8
+-----Turn 166-----
+Turn: 166
+   Start:    11,8
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      11,9
+-----Turn 167-----
+Turn: 167
+   Start:    11,9
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  S
+   End:      11,10
+-----Turn 168-----
+Turn: 168
+   Start:    11,10
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      10,10
+-----Turn 169-----
+Turn: 169
+   Start:    10,10
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      9,10
+-----Turn 170-----
+Turn: 170
+   Start:    9,10
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      9,11
+-----Turn 171-----
+Turn: 171
+   Start:    9,11
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      9,12
+-----Turn 172-----
+Turn: 172
+   Start:    9,12
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['w']) (S ['g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      9,13
+-----Turn 173-----
+Turn: 173
+   Start:    9,13
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['w']) (S ['w']) (W ['g', 'g', 'w']) 
+   Command:  W
+   End:      8,13
+-----Turn 174-----
+Turn: 174
+   Start:    8,13
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['w']) (W ['g', 'w']) 
+   Command:  N
+   End:      8,12
+-----Turn 175-----
+Turn: 175
+   Start:    8,12
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'w']) (W ['g', 'w']) 
+   Command:  N
+   End:      8,11
+-----Turn 176-----
+Turn: 176
+   Start:    8,11
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  N
+   End:      8,10
+-----Turn 177-----
+Turn: 177
+   Start:    8,10
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      7,10
+-----Turn 178-----
+Turn: 178
+   Start:    7,10
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      7,11
+-----Turn 179-----
+Turn: 179
+   Start:    7,11
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      7,12
+-----Turn 180-----
+Turn: 180
+   Start:    7,12
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  S
+   End:      7,13
+-----Turn 181-----
+Turn: 181
+   Start:    7,13
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['w']) (W ['w']) 
+   Command:  N
+   End:      7,12
+-----Turn 182-----
+Turn: 182
+   Start:    7,12
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  N
+   End:      7,11
+-----Turn 183-----
+Turn: 183
+   Start:    7,11
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      7,10
+-----Turn 184-----
+Turn: 184
+   Start:    7,10
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      6,10
+-----Turn 185-----
+Turn: 185
+   Start:    6,10
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      5,10
+-----Turn 186-----
+Turn: 186
+   Start:    5,10
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      5,11
+-----Turn 187-----
+Turn: 187
+   Start:    5,11
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      5,12
+-----Turn 188-----
+Turn: 188
+   Start:    5,12
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      4,12
+-----Turn 189-----
+Turn: 189
+   Start:    4,12
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      4,11
+-----Turn 190-----
+Turn: 190
+   Start:    4,11
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      4,10
+-----Turn 191-----
+Turn: 191
+   Start:    4,10
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      3,10
+-----Turn 192-----
+Turn: 192
+   Start:    3,10
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      3,11
+-----Turn 193-----
+Turn: 193
+   Start:    3,11
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      3,12
+-----Turn 194-----
+Turn: 194
+   Start:    3,12
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'w']) 
+   Command:  W
+   End:      2,12
+-----Turn 195-----
+Turn: 195
+   Start:    2,12
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'w']) 
+   Command:  N
+   End:      2,11
+-----Turn 196-----
+Turn: 196
+   Start:    2,11
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'w']) 
+   Command:  N
+   End:      2,10
+-----Turn 197-----
+Turn: 197
+   Start:    2,10
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  W
+   End:      1,10
+-----Turn 198-----
+Turn: 198
+   Start:    1,10
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      1,11
+-----Turn 199-----
+Turn: 199
+   Start:    1,11
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      1,12
+-----Turn 200-----
+Turn: 200
+   Start:    1,12
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      1,13
+-----Turn 201-----
+Turn: 201
+   Start:    1,13
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      1,14
+-----Turn 202-----
+Turn: 202
+   Start:    1,14
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  E
+   End:      2,14
+-----Turn 203-----
+Turn: 203
+   Start:    2,14
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  E
+   End:      3,14
+-----Turn 204-----
+Turn: 204
+   Start:    3,14
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  E
+   End:      4,14
+-----Turn 205-----
+Turn: 205
+   Start:    4,14
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      5,14
+-----Turn 206-----
+Turn: 206
+   Start:    5,14
+   Percepts: (X ['g']) (N ['w']) (E ['w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      5,15
+-----Turn 207-----
+Turn: 207
+   Start:    5,15
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      5,16
+-----Turn 208-----
+Turn: 208
+   Start:    5,16
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      6,16
+-----Turn 209-----
+Turn: 209
+   Start:    6,16
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      7,16
+-----Turn 210-----
+Turn: 210
+   Start:    7,16
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      7,15
+-----Turn 211-----
+Turn: 211
+   Start:    7,15
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  E
+   End:      8,15
+-----Turn 212-----
+Turn: 212
+   Start:    8,15
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['g', 'w']) (W ['g', 'w']) 
+   Command:  E
+   End:      9,15
+-----Turn 213-----
+Turn: 213
+   Start:    9,15
+   Percepts: (X ['g']) (N ['w']) (E ['w']) (S ['g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      9,16
+-----Turn 214-----
+Turn: 214
+   Start:    9,16
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      8,16
+-----Turn 215-----
+Turn: 215
+   Start:    8,16
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      9,16
+-----Turn 216-----
+Turn: 216
+   Start:    9,16
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      9,15
+-----Turn 217-----
+Turn: 217
+   Start:    9,15
+   Percepts: (X ['g']) (N ['w']) (E ['w']) (S ['g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  W
+   End:      8,15
+-----Turn 218-----
+Turn: 218
+   Start:    8,15
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['g', 'w']) (W ['g', 'w']) 
+   Command:  W
+   End:      7,15
+-----Turn 219-----
+Turn: 219
+   Start:    7,15
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  S
+   End:      7,16
+-----Turn 220-----
+Turn: 220
+   Start:    7,16
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      6,16
+-----Turn 221-----
+Turn: 221
+   Start:    6,16
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      5,16
+-----Turn 222-----
+Turn: 222
+   Start:    5,16
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      4,16
+-----Turn 223-----
+Turn: 223
+   Start:    4,16
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      4,15
+-----Turn 224-----
+Turn: 224
+   Start:    4,15
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      3,15
+-----Turn 225-----
+Turn: 225
+   Start:    3,15
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      3,16
+-----Turn 226-----
+Turn: 226
+   Start:    3,16
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      3,17
+-----Turn 227-----
+Turn: 227
+   Start:    3,17
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      3,18
+-----Turn 228-----
+Turn: 228
+   Start:    3,18
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      3,19
+-----Turn 229-----
+Turn: 229
+   Start:    3,19
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      3,20
+-----Turn 230-----
+Turn: 230
+   Start:    3,20
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      3,21
+-----Turn 231-----
+Turn: 231
+   Start:    3,21
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['w']) (W ['g', 'g', 'w']) 
+   Command:  W
+   End:      2,21
+-----Turn 232-----
+Turn: 232
+   Start:    2,21
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  N
+   End:      2,20
+-----Turn 233-----
+Turn: 233
+   Start:    2,20
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  N
+   End:      2,19
+-----Turn 234-----
+Turn: 234
+   Start:    2,19
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  N
+   End:      2,18
+-----Turn 235-----
+Turn: 235
+   Start:    2,18
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  W
+   End:      1,18
+-----Turn 236-----
+Turn: 236
+   Start:    1,18
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      1,19
+-----Turn 237-----
+Turn: 237
+   Start:    1,19
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      1,20
+-----Turn 238-----
+Turn: 238
+   Start:    1,20
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  S
+   End:      1,21
+-----Turn 239-----
+Turn: 239
+   Start:    1,21
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['w']) (W ['w']) 
+   Command:  N
+   End:      1,20
+-----Turn 240-----
+Turn: 240
+   Start:    1,20
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  N
+   End:      1,19
+-----Turn 241-----
+Turn: 241
+   Start:    1,19
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      1,18
+-----Turn 242-----
+Turn: 242
+   Start:    1,18
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  E
+   End:      2,18
+-----Turn 243-----
+Turn: 243
+   Start:    2,18
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  S
+   End:      2,19
+-----Turn 244-----
+Turn: 244
+   Start:    2,19
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  S
+   End:      2,20
+-----Turn 245-----
+Turn: 245
+   Start:    2,20
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  S
+   End:      2,21
+-----Turn 246-----
+Turn: 246
+   Start:    2,21
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  S
+   End:      2,22
+-----Turn 247-----
+Turn: 247
+   Start:    2,22
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      2,23
+-----Turn 248-----
+Turn: 248
+   Start:    2,23
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  E
+   End:      3,23
+-----Turn 249-----
+Turn: 249
+   Start:    3,23
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  E
+   End:      4,23
+-----Turn 250-----
+Turn: 250
+   Start:    4,23
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      5,23
+-----Turn 251-----
+Turn: 251
+   Start:    5,23
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      5,22
+-----Turn 252-----
+Turn: 252
+   Start:    5,22
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      5,21
+-----Turn 253-----
+Turn: 253
+   Start:    5,21
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      5,20
+-----Turn 254-----
+Turn: 254
+   Start:    5,20
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      5,19
+-----Turn 255-----
+Turn: 255
+   Start:    5,19
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      5,18
+-----Turn 256-----
+Turn: 256
+   Start:    5,18
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  E
+   End:      6,18
+-----Turn 257-----
+Turn: 257
+   Start:    6,18
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  E
+   End:      7,18
+-----Turn 258-----
+Turn: 258
+   Start:    7,18
+   Percepts: (X ['g']) (N ['w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      7,19
+-----Turn 259-----
+Turn: 259
+   Start:    7,19
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  E
+   End:      8,19
+-----Turn 260-----
+Turn: 260
+   Start:    8,19
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      9,19
+-----Turn 261-----
+Turn: 261
+   Start:    9,19
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      9,18
+-----Turn 262-----
+Turn: 262
+   Start:    9,18
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  E
+   End:      10,18
+-----Turn 263-----
+Turn: 263
+   Start:    10,18
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  E
+   End:      11,18
+-----Turn 264-----
+Turn: 264
+   Start:    11,18
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  E
+   End:      12,18
+-----Turn 265-----
+Turn: 265
+   Start:    12,18
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      13,18
+-----Turn 266-----
+Turn: 266
+   Start:    13,18
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      14,18
+-----Turn 267-----
+Turn: 267
+   Start:    14,18
+   Percepts: (X ['g']) (N ['w']) (E ['w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      14,19
+-----Turn 268-----
+Turn: 268
+   Start:    14,19
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      14,20
+-----Turn 269-----
+Turn: 269
+   Start:    14,20
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      14,21
+-----Turn 270-----
+Turn: 270
+   Start:    14,21
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      13,21
+-----Turn 271-----
+Turn: 271
+   Start:    13,21
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      13,20
+-----Turn 272-----
+Turn: 272
+   Start:    13,20
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      13,19
+-----Turn 273-----
+Turn: 273
+   Start:    13,19
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      12,19
+-----Turn 274-----
+Turn: 274
+   Start:    12,19
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      12,20
+-----Turn 275-----
+Turn: 275
+   Start:    12,20
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      12,21
+-----Turn 276-----
+Turn: 276
+   Start:    12,21
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      11,21
+-----Turn 277-----
+Turn: 277
+   Start:    11,21
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  N
+   End:      11,20
+-----Turn 278-----
+Turn: 278
+   Start:    11,20
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  N
+   End:      11,19
+-----Turn 279-----
+Turn: 279
+   Start:    11,19
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      10,19
+-----Turn 280-----
+Turn: 280
+   Start:    10,19
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      10,20
+-----Turn 281-----
+Turn: 281
+   Start:    10,20
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  S
+   End:      10,21
+-----Turn 282-----
+Turn: 282
+   Start:    10,21
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  S
+   End:      10,22
+-----Turn 283-----
+Turn: 283
+   Start:    10,22
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  E
+   End:      11,22
+-----Turn 284-----
+Turn: 284
+   Start:    11,22
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  S
+   End:      11,23
+-----Turn 285-----
+Turn: 285
+   Start:    11,23
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      11,24
+-----Turn 286-----
+Turn: 286
+   Start:    11,24
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['w']) (W ['g', 'g', 'w']) 
+   Command:  W
+   End:      10,24
+-----Turn 287-----
+Turn: 287
+   Start:    10,24
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['w']) (W ['g', 'w']) 
+   Command:  N
+   End:      10,23
+-----Turn 288-----
+Turn: 288
+   Start:    10,23
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  W
+   End:      9,23
+-----Turn 289-----
+Turn: 289
+   Start:    9,23
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      9,22
+-----Turn 290-----
+Turn: 290
+   Start:    9,22
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      9,21
+-----Turn 291-----
+Turn: 291
+   Start:    9,21
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      9,20
+-----Turn 292-----
+Turn: 292
+   Start:    9,20
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      9,21
+-----Turn 293-----
+Turn: 293
+   Start:    9,21
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      9,22
+-----Turn 294-----
+Turn: 294
+   Start:    9,22
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      9,23
+-----Turn 295-----
+Turn: 295
+   Start:    9,23
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      9,24
+-----Turn 296-----
+Turn: 296
+   Start:    9,24
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      9,25
+-----Turn 297-----
+Turn: 297
+   Start:    9,25
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      9,26
+-----Turn 298-----
+Turn: 298
+   Start:    9,26
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  E
+   End:      10,26
+-----Turn 299-----
+Turn: 299
+   Start:    10,26
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  E
+   End:      11,26
+-----Turn 300-----
+Turn: 300
+   Start:    11,26
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  E
+   End:      12,26
+-----Turn 301-----
+Turn: 301
+   Start:    12,26
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      13,26
+-----Turn 302-----
+Turn: 302
+   Start:    13,26
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      13,25
+-----Turn 303-----
+Turn: 303
+   Start:    13,25
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      13,24
+-----Turn 304-----
+Turn: 304
+   Start:    13,24
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      13,23
+-----Turn 305-----
+Turn: 305
+   Start:    13,23
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  E
+   End:      14,23
+-----Turn 306-----
+Turn: 306
+   Start:    14,23
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  E
+   End:      15,23
+-----Turn 307-----
+Turn: 307
+   Start:    15,23
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'w']) 
+   Command:  E
+   End:      16,23
+-----Turn 308-----
+Turn: 308
+   Start:    16,23
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  N
+   End:      16,22
+-----Turn 309-----
+Turn: 309
+   Start:    16,22
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      16,21
+-----Turn 310-----
+Turn: 310
+   Start:    16,21
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      16,20
+-----Turn 311-----
+Turn: 311
+   Start:    16,20
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      16,19
+-----Turn 312-----
+Turn: 312
+   Start:    16,19
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      16,18
+-----Turn 313-----
+Turn: 313
+   Start:    16,18
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      16,17
+-----Turn 314-----
+Turn: 314
+   Start:    16,17
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      16,16
+-----Turn 315-----
+Turn: 315
+   Start:    16,16
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      16,15
+-----Turn 316-----
+Turn: 316
+   Start:    16,15
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  N
+   End:      16,14
+-----Turn 317-----
+Turn: 317
+   Start:    16,14
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  E
+   End:      17,14
+-----Turn 318-----
+Turn: 318
+   Start:    17,14
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['w']) (S ['w']) (W ['g', 'w']) 
+   Command:  N
+   End:      17,13
+-----Turn 319-----
+Turn: 319
+   Start:    17,13
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'w']) (W ['w']) 
+   Command:  N
+   End:      17,12
+-----Turn 320-----
+Turn: 320
+   Start:    17,12
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  E
+   End:      18,12
+-----Turn 321-----
+Turn: 321
+   Start:    18,12
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['w']) (W ['g', 'w']) 
+   Command:  E
+   End:      19,12
+-----Turn 322-----
+Turn: 322
+   Start:    19,12
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['g', 'w']) (S ['w']) (W ['g', 'g', 'w']) 
+   Command:  N
+   End:      19,11
+-----Turn 323-----
+Turn: 323
+   Start:    19,11
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'g', 'g', 'w']) (S ['g', 'w']) (W ['w']) 
+   Command:  E
+   End:      20,11
+-----Turn 324-----
+Turn: 324
+   Start:    20,11
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'w']) 
+   Command:  N
+   End:      20,10
+-----Turn 325-----
+Turn: 325
+   Start:    20,10
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      20,11
+-----Turn 326-----
+Turn: 326
+   Start:    20,11
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'g', 'w']) (E ['g', 'g', 'g', 'w']) (S ['g', 'w']) (W ['g', 'w']) 
+   Command:  E
+   End:      21,11
+-----Turn 327-----
+Turn: 327
+   Start:    21,11
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'g', 'w']) (S ['w']) (W ['g', 'g', 'w']) 
+   Command:  E
+   End:      22,11
+-----Turn 328-----
+Turn: 328
+   Start:    22,11
+   Percepts: (X ['g']) (N ['w']) (E ['g', 'w']) (S ['w']) (W ['g', 'g', 'g', 'w']) 
+   Command:  E
+   End:      23,11
+-----Turn 329-----
+Turn: 329
+   Start:    23,11
+   Percepts: (X ['g']) (N ['w']) (E ['w']) (S ['g', 'g', 'g', 'g', 'w']) (W ['g', 'g', 'g', 'g', 'w']) 
+   Command:  S
+   End:      23,12
+-----Turn 330-----
+Turn: 330
+   Start:    23,12
+   Percepts: (X ['g']) (N ['g', 'w']) (E ['w']) (S ['g', 'g', 'g', 'w']) (W ['w']) 
+   Command:  S
+   End:      23,13
+-----Turn 331-----
+Turn: 331
+   Start:    23,13
+   Percepts: (X ['g']) (N ['g', 'g', 'w']) (E ['w']) (S ['g', 'g', 'w']) (W ['g', 'w']) 
+   Command:  S
+   End:      23,14
+-----Turn 332-----
+Turn: 332
+   Start:    23,14
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'w']) (E ['w']) (S ['g', 'w']) (W ['g', 'w']) 
+   Command:  S
+   End:      23,15
+-----Turn 333-----
+Turn: 333
+   Start:    23,15
+   Percepts: (X ['g']) (N ['g', 'g', 'g', 'g', 'w']) (E ['w']) (S ['w']) (W ['r', 'w']) 
+   Command:  W
+   End:      22,15
+-----Turn 334-----
+Turn: 334
+   Start:    22,15
+   Percepts: (X ['r']) (N ['g', 'g', 'w']) (E ['g', 'w']) (S ['w']) (W ['w']) 
+   Command:  U
+   Trigger:  Agent has exited the environment.
+   End:      22,15
+-----Scenario Finished-----
+FINAL AGENT STATE: EXITED
+FINAL SCORE: 666
