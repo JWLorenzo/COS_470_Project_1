@@ -125,12 +125,8 @@ class AI:
         while len(move_stack) > temp_len:
             self.move_stack.pop()
 
-    # function to perform overall map search algorithm
-    def depth_first_search(self, percepts):
-        # exit if at goal state
-        if percepts["X"][0] == "r":
-            return "U"
-        
+    # function to move towards the goal tile
+    def goal_approach(self, percepts):
         # move towards goal if it is visible
         # no possible issues of movement validity
         if "r" in percepts["N"]:
@@ -161,6 +157,17 @@ class AI:
             self.move_stack.append(self.oppMove["W"])
             self.update_position("W")
             return "W"
+        return False
+
+    # function to perform overall map search algorithm
+    def depth_first_search(self, percepts):
+        # exit if at goal state
+        if percepts["X"][0] == "r":
+            return "U"
+        
+        # move towards goal if it is visible
+        if self.goal_approach(percepts):
+            return self.goal_approach(percepts)
         
         # iterate through possible movements in order: N E S W
         for move in self.valid_moves:
