@@ -102,6 +102,10 @@ class AI:
                     position_list += ["u"]
             if len(position_list) == 8:
                 check_list = [
+                    [["N", "E", "W", "SE", "SW"], []],
+                    [["N", "E", "S", "SW", "NW"], []],
+                    [["E", "S", "W", "NE", "NW"], []],
+                    [["N", "S", "W", "NE", "SE"], []],
                     [["N", "E", "W"], ["SW", "S", "SE"]],
                     [["N", "E", "S"], ["W", "SW", "NW"]],
                     [["E", "S", "W"], ["N", "NE", "NW"]],
