@@ -71,6 +71,9 @@ class AI:
         # variable to record movement for loop determination
         self.move_stack_run = []
 
+        # variable to record maximum number of branches per tile position
+        self.branch_num_max = []
+
         # variable to record number of branches per tile position
         self.branch_num = []
 
@@ -120,50 +123,50 @@ class AI:
         if percepts["N"][0] != "w":
             dx, dy = self.direction_To_Coord["N"]
             new_position = (self.position[0] + dx, self.position[1] + dy)
-            if new_position not in self.traversed:
-                temp_branch = temp_branch + 1
+            temp_branch = temp_branch + 1
+            #if new_position not in self.traversed:
+            #    temp_branch = temp_branch + 1
         if percepts["E"][0] != "w":
             dx, dy = self.direction_To_Coord["E"]
             new_position = (self.position[0] + dx, self.position[1] + dy)
-            if new_position not in self.traversed:
-                temp_branch = temp_branch + 1
+            temp_branch = temp_branch + 1
+            #if new_position not in self.traversed:
+            #    temp_branch = temp_branch + 1
         if percepts["S"][0] != "w":
             dx, dy = self.direction_To_Coord["S"]
             new_position = (self.position[0] + dx, self.position[1] + dy)
-            if new_position not in self.traversed:
-                temp_branch = temp_branch + 1
+            temp_branch = temp_branch + 1
+            #if new_position not in self.traversed:
+            #    temp_branch = temp_branch + 1
         if percepts["W"][0] != "w":
             dx, dy = self.direction_To_Coord["W"]
             new_position = (self.position[0] + dx, self.position[1] + dy)
-            if new_position not in self.traversed:
-                temp_branch = temp_branch + 1
+            temp_branch = temp_branch + 1
+            #if new_position not in self.traversed:
+            #    temp_branch = temp_branch + 1
         #print(temp_branch)
         return temp_branch
     
     # function to recalculate possible branches for each position
     def branch_recheck(self, percepts):
-        for iter, branch in enumerate(self.branch_num):
-            temp_branch = 0
-            if percepts["N"][0] != "w":
-                dx, dy = self.direction_To_Coord["N"]
-                new_position = (self.position[0] + dx, self.position[1] + dy)
-                if new_position not in self.traversed:
-                    temp_branch = temp_branch + 1
-            if percepts["E"][0] != "w":
-                dx, dy = self.direction_To_Coord["E"]
-                new_position = (self.position[0] + dx, self.position[1] + dy)
-                if new_position not in self.traversed:
-                    temp_branch = temp_branch + 1
-            if percepts["S"][0] != "w":
-                dx, dy = self.direction_To_Coord["S"]
-                new_position = (self.position[0] + dx, self.position[1] + dy)
-                if new_position not in self.traversed:
-                    temp_branch = temp_branch + 1
-            if percepts["W"][0] != "w":
-                dx, dy = self.direction_To_Coord["W"]
-                new_position = (self.position[0] + dx, self.position[1] + dy)
-                if new_position not in self.traversed:
-                    temp_branch = temp_branch + 1
+        for iter, branch in enumerate(self.branch_num_max):
+            temp_branch = branch
+            dx, dy = self.direction_To_Coord["N"]
+            new_position = (self.traversed[iter][0] + dx, self.traversed[iter][1] + dy)
+            if new_position in self.traversed:
+                temp_branch = temp_branch - 1
+            dx, dy = self.direction_To_Coord["E"]
+            new_position = (self.traversed[iter][0] + dx, self.traversed[iter][1] + dy)
+            if new_position in self.traversed:
+                temp_branch = temp_branch - 1
+            dx, dy = self.direction_To_Coord["S"]
+            new_position = (self.traversed[iter][0] + dx, self.traversed[iter][1] + dy)
+            if new_position in self.traversed:
+                temp_branch = temp_branch - 1
+            dx, dy = self.direction_To_Coord["W"]
+            new_position = (self.traversed[iter][0] + dx, self.traversed[iter][1] + dy)
+            if new_position in self.traversed:
+                temp_branch = temp_branch - 1
             self.branch_num[iter] = temp_branch
 
     # function to check if agent has gone around a loop TODO
@@ -277,7 +280,7 @@ class AI:
                                 #print("oppMove!")
                                 #self.move_stack.pop()
                                 break
-                            if self.branch_num[iter] > 1:
+                            if self.branch_num[iter] > 0:
                                 #print("branching!")
                                 break
                             if (move_sub == "N"):
@@ -345,6 +348,7 @@ class AI:
             #print("victory approach")
             # record position, record movement complement, and perform movement
             self.traversed.append(tuple(self.position))
+            self.branch_num_max.append(self.branch_check(percepts))
             self.branch_num.append(self.branch_check(percepts))
             self.branch_recheck(percepts)
             self.move_stack.append(self.oppMove["N"])
@@ -355,6 +359,7 @@ class AI:
             #print("victory approach")
             # record position, record movement complement, and perform movement
             self.traversed.append(tuple(self.position))
+            self.branch_num_max.append(self.branch_check(percepts))
             self.branch_num.append(self.branch_check(percepts))
             self.branch_recheck(percepts)
             self.move_stack.append(self.oppMove["E"])
@@ -365,6 +370,7 @@ class AI:
             #print("victory approach")
             # record position, record movement complement, and perform movement
             self.traversed.append(tuple(self.position))
+            self.branch_num_max.append(self.branch_check(percepts))
             self.branch_num.append(self.branch_check(percepts))
             self.branch_recheck(percepts)
             self.move_stack.append(self.oppMove["S"])
@@ -375,6 +381,7 @@ class AI:
             #print("victory approach")
             # record position, record movement complement, and perform movement
             self.traversed.append(tuple(self.position))
+            self.branch_num_max.append(self.branch_check(percepts))
             self.branch_num.append(self.branch_check(percepts))
             self.branch_recheck(percepts)
             self.move_stack.append(self.oppMove["W"])
@@ -402,6 +409,7 @@ class AI:
                 #print("valid move")
                 # record position, record movement complement, and perform movement
                 self.traversed.append(tuple(self.position))
+                self.branch_num_max.append(self.branch_check(percepts))
                 self.branch_num.append(self.branch_check(percepts))
                 self.branch_recheck(percepts)
                 self.move_stack.append(self.oppMove[move])
@@ -419,6 +427,7 @@ class AI:
                 # check if agent has performed a loop
                 #print(self.move_stack)
                 self.traversed.append(tuple(self.position))
+                self.branch_num_max.append(self.branch_check(percepts))
                 self.branch_num.append(self.branch_check(percepts))
                 self.branch_recheck(percepts)
                 
