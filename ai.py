@@ -76,34 +76,27 @@ class AI:
 
     def calculate_position(self, origin, move):
         dx, dy = self.direction_To_Coord[move]
-        return [origin[0] + dx, origin[1] + dy]
+        return (origin[0] + dx, origin[1] + dy)
 
     def map_location(self, percepts):
         for move in self.valid_moves:
             base_position = self.position
             for i in range(len(percepts[move])):
                 base_position = self.calculate_position(base_position, move)
-                self.map[tuple(base_position)] = percepts[move][i]
-                if (
-                    tuple(base_position) not in self.traversed
-                    or percepts[move][i] not in "w"
-                ):
-                    self.unmarked[tuple(base_position)] = percepts[move][i]
+                self.map[base_position] = percepts[move][i]
+                if base_position not in self.traversed or percepts[move][i] not in "w":
+                    self.unmarked[base_position] = percepts[move][i]
 
     def cull_tiles(self):
         copy_dict = self.unmarked.copy()
         for coord in copy_dict:
             position_list = []
             for i in self.direction_To_Coord.keys():
-                if tuple(self.calculate_position(coord, i)) in self.traversed:
+                if self.calculate_position(coord, i) in self.traversed:
                     position_list += ["t"]
-                elif (
-                    self.map.get(tuple(self.calculate_position(coord, i)), False) == "w"
-                ):
+                elif self.map.get(self.calculate_position(coord, i), False) == "w":
                     position_list += ["w"]
-                elif (
-                    self.map.get(tuple(self.calculate_position(coord, i)), False) == "g"
-                ):
+                elif self.map.get(self.calculate_position(coord, i), False) == "g":
                     position_list += ["g"]
                 else:
                     position_list += ["u"]
@@ -123,8 +116,8 @@ class AI:
                     [["W"], ["N", "NE", "E", "SE", "S"]],
                 ]
                 if all(x in ("g") for x in position_list):
-                    self.traversed.append(tuple(coord))
-                    self.unmarked.pop(tuple(coord))
+                    self.traversed.append(coord)
+                    self.unmarked.pop(coord)
                     if coord in self.visit_queue:
                         self.visit_queue.remove(coord)
                     break
@@ -135,18 +128,25 @@ class AI:
                             in ("t", "w")
                             for x in i[0]
                         ):
-                            if all(
-                                position_list[self.direction_To_Index.get(x, False)]
-                                in ("g")
-                                for x in i[1]
+                            if (
+                                all(
+                                    position_list[self.direction_To_Index.get(x, False)]
+                                    in ("g")
+                                    for x in i[1]
+                                )
+                                and all(
+                                    self.calculate_position(coord, x)
+                                    not in self.traversed
+                                    for x in i[1]
+                                )
                             ) or (
-                                tuple(self.calculate_position(coord, i[0][0]))
+                                self.calculate_position(coord, i[0][0])
                                 == tuple(self.position)
                                 and len(i[0]) == 3
                             ):
 
-                                self.traversed.append(tuple(coord))
-                                self.unmarked.pop(tuple(coord))
+                                self.traversed.append(coord)
+                                self.unmarked.pop(coord)
                                 if coord in self.visit_queue:
                                     self.visit_queue.remove(coord)
                                 break
@@ -169,13 +169,12 @@ class AI:
 
         if percepts["X"][0] == "r":
             return "U"
+
         for move in self.valid_moves:
             if self.valid_move(move, percepts):
                 self.traversed.append(tuple(self.position))
                 self.move_stack.append(self.oppMove[move])
-                self.visit_queue.append(
-                    tuple(self.calculate_position(self.position, move))
-                )
+                self.visit_queue.append(self.calculate_position(self.position, move))
                 self.update_position(move)
                 return move
 
@@ -215,7 +214,6 @@ class AI:
         The same goes for goal hexes (0, 1, 2, 3, 4, 5, 6, 7, 8, 9).
         """
         # time.sleep(100000)
-        self.turn += 1
         return self.depth_first_search(percepts)
 
 
