@@ -231,6 +231,8 @@ class AI:
 
     # function to check if agent has gone around a loop TODO
     def loop_check_new(self, percepts):
+        temp_move_final = None
+        temp_iter_final = None
         # check possible modified positions
         for move in self.valid_moves:
             if self.valid_move_loop(move, percepts):
@@ -315,14 +317,32 @@ class AI:
                                 #if first_pos == last_pos and temp_len > 1:
                                 if first_pos == last_pos and (temp_iter - 1) < len(self.move_stack):
                                     #print("pop2!")
-                                    self.move_stack_run.pop()
-                                    return [temp_move, temp_iter - 1]
+                                    #self.move_stack_run.pop()
+                                    if temp_iter_final is None:
+                                        #print("iter final 1!")
+                                        temp_iter_final = temp_iter - 1
+                                    if temp_move_final is None:
+                                        #print("move final 1!")
+                                        temp_move_final = temp_move
+                                    if (temp_iter - 1) > temp_iter_final:
+                                        #print("update!")
+                                        temp_iter_final = temp_iter - 1
+                                        temp_move_final = temp_move
+                                    #return [temp_move, temp_iter - 1]
                     #print("pop3!")
                     self.move_stack_run.pop()
             #print("here!")
             #print(move)
-            if move == "W":
-                return [False, False]
+            #self.move_stack_run.pop()
+            #if temp_move_final is not None and temp_iter_final is not None:
+            #    return [temp_move_final, temp_iter_final]
+            #if move == "W":
+            #    return [False, False]
+        if temp_move_final is not None and temp_iter_final is not None:
+            #print([temp_move_final, temp_iter_final])
+            return [temp_move_final, temp_iter_final]
+        else:
+            return [False, False]
 
     # function to perform several prior movement removals TODO
     def multi_pop(self, loop_len):
@@ -435,13 +455,12 @@ class AI:
                 #print(self.branch_num)
                 
                 if self.loop_check_new(percepts)[0] != False and self.loop_flag == False and self.backtrack_flag == False:
-                # remove loop removal function v
+                # removes loop removal function v
                 #if self.loop_check_new(percepts)[0] != False and self.loop_flag == True and self.backtrack_flag == False:
                     #print("loop!")
                     #print(self.move_stack)
                     temp_loop = []
                     temp_loop = self.loop_check_new(percepts)
-                    #print(temp_loop)
                     #print(temp_loop)
                     self.multi_pop(temp_loop[1])
                     #self.traversed.append(tuple(self.position))
