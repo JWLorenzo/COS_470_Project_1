@@ -77,6 +77,9 @@ class AI:
         # variable to track loop traversal status
         self.loop_flag = False
 
+        # variable to track backtrack traversal status
+        self.backtrack_flag = False
+
     # function to change agent position according to chosen movement
     def update_position(self, move):
         # assign movement increments and modify position
@@ -278,10 +281,10 @@ class AI:
                                 #print(temp_len)
                                 #if first_pos == last_pos and temp_len > 1:
                                 if first_pos == last_pos and (temp_iter - 1) < len(self.move_stack):
-                                    print("pop2!")
+                                    #print("pop2!")
                                     self.move_stack_run.pop()
                                     return [temp_move, temp_iter - 1]
-                    print("pop3!")
+                    #print("pop3!")
                     self.move_stack_run.pop()
             #print("here!")
             #print(move)
@@ -355,6 +358,7 @@ class AI:
         # move towards goal if it is visible
         if self.goal_check(percepts):
             self.loop_flag = False
+            self.backtrack_flag = False
             return self.goal_approach(percepts)
         
         # iterate through possible movements in order: N E S W
@@ -369,6 +373,7 @@ class AI:
                 self.move_stack_run.append(self.oppMove[move])
                 self.update_position(move)
                 self.loop_flag = False
+                self.backtrack_flag = False
                 return move
 
             # check to see if all movements have been attempted
@@ -381,7 +386,9 @@ class AI:
                 self.traversed.append(tuple(self.position))
                 self.branch_num.append(self.branch_check(percepts))
                 
-                if self.loop_check_new(percepts)[0] != False and self.loop_flag == False:
+                if self.loop_check_new(percepts)[0] != False and self.loop_flag == False and self.backtrack_flag == False:
+                # remove loop removal function v
+                #if self.loop_check_new(percepts)[0] != False and self.loop_flag == True and self.backtrack_flag == False:
                     #print("loop!")
                     #print(self.move_stack)
                     temp_loop = []
@@ -394,6 +401,7 @@ class AI:
                     #print(self.move_stack)
                     self.move_stack_run.append(self.oppMove[temp_loop[0]])
                     self.loop_flag = True
+                    self.backtrack_flag = False
                     return temp_loop[0]
                 
                 # record position, remove prior movement, and perform backtrack
@@ -404,10 +412,12 @@ class AI:
                 self.update_position(backtrack)
                 self.move_stack_run.append(self.oppMove[backtrack])
                 self.loop_flag = False
+                self.backtrack_flag = True
                 return backtrack
 
         # failsafe return statement
         self.loop_flag = False
+        self.backtrack_flag = False
         return "N"
 
     # function to repeatedly perform agent action
