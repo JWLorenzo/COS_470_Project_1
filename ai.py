@@ -71,6 +71,12 @@ class AI:
         # variable to record movement for loop determination
         self.move_stack_run = []
 
+        # variable to record number of branches per tile position
+        self.branch_num = []
+
+        # variable to track loop traversal status
+        self.loop_flag = False
+
     # function to change agent position according to chosen movement
     def update_position(self, move):
         # assign movement increments and modify position
@@ -104,6 +110,32 @@ class AI:
             return False
         #print("new position", new_position)
         return new_position
+    
+    # function to record possible branches for each position TODO
+    def branch_check(self, percepts):
+        temp_branch = 0
+        if percepts["N"][0] != "w":
+            dx, dy = self.direction_To_Coord["N"]
+            new_position = (self.position[0] + dx, self.position[1] + dy)
+            if new_position not in self.traversed:
+                temp_branch = temp_branch + 1
+        if percepts["E"][0] != "w":
+            dx, dy = self.direction_To_Coord["E"]
+            new_position = (self.position[0] + dx, self.position[1] + dy)
+            if new_position not in self.traversed:
+                temp_branch = temp_branch + 1
+        if percepts["S"][0] != "w":
+            dx, dy = self.direction_To_Coord["S"]
+            new_position = (self.position[0] + dx, self.position[1] + dy)
+            if new_position not in self.traversed:
+                temp_branch = temp_branch + 1
+        if percepts["W"][0] != "w":
+            dx, dy = self.direction_To_Coord["W"]
+            new_position = (self.position[0] + dx, self.position[1] + dy)
+            if new_position not in self.traversed:
+                temp_branch = temp_branch + 1
+        #print(temp_branch)
+        return temp_branch
 
     # function to check if agent has gone around a loop TODO
     def loop_check(self, percepts):
@@ -115,7 +147,7 @@ class AI:
                 break
             if move == "W":
                 return [False, False]
-        print(temp_move)
+        #print(temp_move)
         # assign movement increments and modify position
         dx, dy = self.direction_To_Coord[temp_move]
         new_pos = (self.position[0] + dx, self.position[1] + dy)
@@ -125,10 +157,10 @@ class AI:
                 temp_iter = len(self.traversed) - iter
                 break
         self.move_stack.append(self.oppMove[temp_move])
-        print(temp_iter)
-        print(len(self.move_stack))
-        print(self.traversed)
-        print(self.move_stack)
+        #print(temp_iter)
+        #print(len(self.move_stack))
+        #print(self.traversed)
+        #print(self.move_stack)
         if temp_iter > len(self.move_stack):
             return [False, False]
         # check if the movements form a loop
@@ -141,7 +173,7 @@ class AI:
                 last_move = move
                 first_pos = self.traversed[iter]
                 temp_len = temp_len + 1
-                print(last_move)
+                #print(last_move)
             elif iter > (len(self.move_stack) - temp_iter):
                 if self.oppMove[last_move] == move:
                     self.move_stack.pop()
@@ -149,12 +181,12 @@ class AI:
                 last_move = move
                 last_pos = self.traversed[iter]
                 temp_len = temp_len + 1
-                print(last_move)
-        print(first_pos)
-        print(last_pos)
+                #print(last_move)
+        #print(first_pos)
+        #print(last_pos)
         if last_pos != None:
             last_pos = (last_pos[0] + dx, last_pos[1] + dy)
-            print(last_pos)
+            #print(last_pos)
         if first_pos != last_pos:
             self.move_stack.pop()
             return [False, False]
@@ -171,7 +203,7 @@ class AI:
         for move in self.valid_moves:
             if self.valid_move_loop(move, percepts):
                 temp_move = move
-                print(temp_move)
+                #print(temp_move)
                 N_flag = False
                 E_flag = False
                 S_flag = False
@@ -196,6 +228,8 @@ class AI:
                         #print(last_move)
                         if iter == (len(self.move_stack_run) - temp_iter):
                             #print("equal!")
+                            if self.branch_num[iter] > 2:
+                                break
                             if (move_sub == "N"):
                                 N_flag = True
                             if (move_sub == "E"):
@@ -209,6 +243,12 @@ class AI:
                             temp_len = temp_len + 1
                         elif iter > (len(self.move_stack_run) - temp_iter):
                             #print("greater!")
+                            if self.oppMove[last_move] == move_sub:
+                                #print("oppMove!")
+                                #self.move_stack.pop()
+                                break
+                            if self.branch_num[iter] > 1:
+                                break
                             if (move_sub == "N"):
                                 N_flag = True
                             if (move_sub == "E"):
@@ -217,10 +257,6 @@ class AI:
                                 S_flag = True
                             if (move_sub == "W"):
                                 W_flag = True
-                            if self.oppMove[last_move] == move_sub:
-                                print("oppMove!")
-                                #self.move_stack.pop()
-                                break
                             last_move = move_sub
                             last_pos = self.traversed[iter]
                             temp_len = temp_len + 1
@@ -230,25 +266,25 @@ class AI:
                         #self.move_stack.pop()
                         #continue
                     if last_move is not None:
-                        print("final!")
+                        #print("final!")
                         #if self.oppMove[last_move] != move:
                         flag_sum = N_flag + E_flag + S_flag + W_flag
-                        print(flag_sum)
+                        #print(flag_sum)
                         if temp_len > 1 and flag_sum == 4:
                             if last_pos is not None:
                                 last_pos = (last_pos[0] + dx, last_pos[1] + dy)
-                                print(first_pos)
-                                print(last_pos)
-                                print(temp_len)
+                                #print(first_pos)
+                                #print(last_pos)
+                                #print(temp_len)
                                 #if first_pos == last_pos and temp_len > 1:
-                                if first_pos == last_pos:
+                                if first_pos == last_pos and (temp_iter - 1) < len(self.move_stack):
                                     print("pop2!")
                                     self.move_stack_run.pop()
                                     return [temp_move, temp_iter - 1]
                     print("pop3!")
                     self.move_stack_run.pop()
-            print("here!")
-            print(move)
+            #print("here!")
+            #print(move)
             if move == "W":
                 return [False, False]
 
@@ -262,6 +298,12 @@ class AI:
             #print(temp_move)
             temp_iter = temp_iter + 1
 
+    # function to check goal visibility
+    def goal_check(self, percepts):
+        if "r" in percepts["N"] or "r" in percepts["E"] or "r" in percepts["S"] or "r" in percepts["W"]:
+            return True
+        return False
+    
     # function to move towards the goal tile
     def goal_approach(self, percepts):
         # move towards goal if it is visible
@@ -270,6 +312,7 @@ class AI:
             #print("victory approach")
             # record position, record movement complement, and perform movement
             self.traversed.append(tuple(self.position))
+            self.branch_num.append(self.branch_check(percepts))
             self.move_stack.append(self.oppMove["N"])
             self.move_stack_run.append(self.oppMove["N"])
             self.update_position("N")
@@ -278,6 +321,7 @@ class AI:
             #print("victory approach")
             # record position, record movement complement, and perform movement
             self.traversed.append(tuple(self.position))
+            self.branch_num.append(self.branch_check(percepts))
             self.move_stack.append(self.oppMove["E"])
             self.move_stack_run.append(self.oppMove["E"])
             self.update_position("E")
@@ -286,6 +330,7 @@ class AI:
             #print("victory approach")
             # record position, record movement complement, and perform movement
             self.traversed.append(tuple(self.position))
+            self.branch_num.append(self.branch_check(percepts))
             self.move_stack.append(self.oppMove["S"])
             self.move_stack_run.append(self.oppMove["S"])
             self.update_position("S")
@@ -294,6 +339,7 @@ class AI:
             #print("victory approach")
             # record position, record movement complement, and perform movement
             self.traversed.append(tuple(self.position))
+            self.branch_num.append(self.branch_check(percepts))
             self.move_stack.append(self.oppMove["W"])
             self.move_stack_run.append(self.oppMove["W"])
             self.update_position("W")
@@ -307,7 +353,8 @@ class AI:
             return "U"
         
         # move towards goal if it is visible
-        if self.goal_approach(percepts):
+        if self.goal_check(percepts):
+            self.loop_flag = False
             return self.goal_approach(percepts)
         
         # iterate through possible movements in order: N E S W
@@ -317,9 +364,11 @@ class AI:
                 #print("valid move")
                 # record position, record movement complement, and perform movement
                 self.traversed.append(tuple(self.position))
+                self.branch_num.append(self.branch_check(percepts))
                 self.move_stack.append(self.oppMove[move])
                 self.move_stack_run.append(self.oppMove[move])
                 self.update_position(move)
+                self.loop_flag = False
                 return move
 
             # check to see if all movements have been attempted
@@ -328,34 +377,38 @@ class AI:
                 #print("backtracking")
                 #print("traversed", self.traversed)
                 # check if agent has performed a loop
-                print(self.move_stack)
+                #print(self.move_stack)
                 self.traversed.append(tuple(self.position))
+                self.branch_num.append(self.branch_check(percepts))
                 
-                if self.loop_check_new(percepts)[0] != False:
-                    print("loop!")
-                    print(self.move_stack)
+                if self.loop_check_new(percepts)[0] != False and self.loop_flag == False:
+                    #print("loop!")
+                    #print(self.move_stack)
                     temp_loop = []
                     temp_loop = self.loop_check_new(percepts)
-                    print(temp_loop)
+                    #print(temp_loop)
                     #print(temp_loop)
                     self.multi_pop(temp_loop[1])
                     #self.traversed.append(tuple(self.position))
                     self.update_position(temp_loop[0])
-                    print(self.move_stack)
+                    #print(self.move_stack)
                     self.move_stack_run.append(self.oppMove[temp_loop[0]])
+                    self.loop_flag = True
                     return temp_loop[0]
                 
                 # record position, remove prior movement, and perform backtrack
-                print("backtrack!")
-                print(self.move_stack)
+                #print("backtrack!")
+                #print(self.move_stack)
                 #self.traversed.append(tuple(self.position))
                 backtrack = self.move_stack.pop()
                 self.update_position(backtrack)
                 self.move_stack_run.append(self.oppMove[backtrack])
+                self.loop_flag = False
                 return backtrack
 
-        # failsafe return statement, agent is permanently stuck
-        return "U"
+        # failsafe return statement
+        self.loop_flag = False
+        return "N"
 
     # function to repeatedly perform agent action
     def update(self, percepts):
