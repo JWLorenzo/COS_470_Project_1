@@ -9,6 +9,7 @@
 #     sees the goal, it moves directly towards it in order to finish the task faster.
 #
 #     TODO: find a way to eliminate apparent loops to bypass backtrack (worldB right side)
+#     TODO: find a way to cull tiles that should not be visited
 
 
 """
@@ -64,8 +65,11 @@ class AI:
         # unused variable to record desired movements
         self.visit_queue = []
 
-        # variable used to record movement for backtrack traversal
+        # variable to record movement for backtrack traversal
         self.move_stack = []
+
+        # variable to record movement for loop determination
+        self.move_stack_run = []
 
     # function to change agent position according to chosen movement
     def update_position(self, move):
@@ -86,44 +90,177 @@ class AI:
             return False
         #print("new position", new_position)
         return new_position
+    
+    # function to check if desired agent position is valid (loop case) TODO
+    def valid_move_loop(self, direction, percepts):
+        #print("percepts", percepts)
+        #print("direction", direction)
+        #print("traversed", self.traversed)
+        # assign movement increments and modify position
+        dx, dy = self.direction_To_Coord[direction]
+        new_position = (self.position[0] + dx, self.position[1] + dy)
+        # check if chosen position is valid and has not been traversed
+        if percepts[direction][0] == "w":
+            return False
+        #print("new position", new_position)
+        return new_position
 
     # function to check if agent has gone around a loop TODO
-    def loop_check(self):
-        # create possible modified positions
-        temp_pos = []
-        dx, dy = self.direction_To_Coord["N"]
-        temp_pos[0] = (self.position[0] + dx, self.position[1] + dy)
-        dx, dy = self.direction_To_Coord["E"]
-        temp_pos[1] = (self.position[0] + dx, self.position[1] + dy)
-        dx, dy = self.direction_To_Coord["S"]
-        temp_pos[2] = (self.position[0] + dx, self.position[1] + dy)
-        dx, dy = self.direction_To_Coord["W"]
-        temp_pos[3] = (self.position[0] + dx, self.position[1] + dy)
+    def loop_check(self, percepts):
+        # check possible modified positions
+        for move in self.valid_moves:
+            #if self.valid_move_loop(move, percepts) and move != self.oppMove[self.move_stack[-1]]:
+            if self.valid_move_loop(move, percepts):
+                temp_move = move
+                break
+            if move == "W":
+                return [False, False]
+        print(temp_move)
+        # assign movement increments and modify position
+        dx, dy = self.direction_To_Coord[temp_move]
+        new_pos = (self.position[0] + dx, self.position[1] + dy)
         # check where the (possible) loop starts
         for iter, pos in enumerate(self.traversed):
-            if pos in temp_pos:
-                temp_iter = iter
+            if pos == new_pos:
+                temp_iter = len(self.traversed) - iter
                 break
+        self.move_stack.append(self.oppMove[temp_move])
+        print(temp_iter)
+        print(len(self.move_stack))
+        print(self.traversed)
+        print(self.move_stack)
+        if temp_iter > len(self.move_stack):
+            return [False, False]
         # check if the movements form a loop
+        # no opposing movement indicates a loop
+        temp_len = 0
+        first_pos = None
+        last_pos = None
         for iter, move in enumerate(self.move_stack):
-            if iter == temp_iter:
+            if iter == (len(self.move_stack) - temp_iter):
                 last_move = move
-            elif iter >= temp_iter:
+                first_pos = self.traversed[iter]
+                temp_len = temp_len + 1
+                print(last_move)
+            elif iter > (len(self.move_stack) - temp_iter):
                 if self.oppMove[last_move] == move:
-                    return False
+                    self.move_stack.pop()
+                    return [False, False]
                 last_move = move
-        return True
+                last_pos = self.traversed[iter]
+                temp_len = temp_len + 1
+                print(last_move)
+        print(first_pos)
+        print(last_pos)
+        if last_pos != None:
+            last_pos = (last_pos[0] + dx, last_pos[1] + dy)
+            print(last_pos)
+        if first_pos != last_pos:
+            self.move_stack.pop()
+            return [False, False]
+        if temp_len > 1:
+            self.move_stack.pop()
+            return [temp_move, temp_iter - 1]
+        else:
+            self.move_stack.pop()
+            return [False, False] # 26 13 for worldB loop test - 29 6 for worldB dead end test
+
+    # function to check if agent has gone around a loop TODO
+    def loop_check_new(self, percepts):
+        # check possible modified positions
+        for move in self.valid_moves:
+            if self.valid_move_loop(move, percepts):
+                temp_move = move
+                print(temp_move)
+                N_flag = False
+                E_flag = False
+                S_flag = False
+                W_flag = False
+                # assign movement increments and modify position
+                dx, dy = self.direction_To_Coord[temp_move]
+                new_pos = (self.position[0] + dx, self.position[1] + dy)
+                # check where the (possible) loop starts
+                for iter, pos in enumerate(self.traversed):
+                    if pos == new_pos:
+                        temp_iter = len(self.traversed) - iter
+                        break
+                if temp_iter <= len(self.move_stack_run):
+                    self.move_stack_run.append(self.oppMove[temp_move])
+                    # check if the movements form a loop
+                    # no opposing movement indicates a loop
+                    temp_len = 0
+                    first_pos = None
+                    last_pos = None
+                    last_move = None
+                    for iter, move_sub in enumerate(self.move_stack_run):
+                        #print(last_move)
+                        if iter == (len(self.move_stack_run) - temp_iter):
+                            #print("equal!")
+                            if (move_sub == "N"):
+                                N_flag = True
+                            if (move_sub == "E"):
+                                E_flag = True
+                            if (move_sub == "S"):
+                                S_flag = True
+                            if (move_sub == "W"):
+                                W_flag = True
+                            last_move = move_sub
+                            first_pos = self.traversed[iter]
+                            temp_len = temp_len + 1
+                        elif iter > (len(self.move_stack_run) - temp_iter):
+                            #print("greater!")
+                            if (move_sub == "N"):
+                                N_flag = True
+                            if (move_sub == "E"):
+                                E_flag = True
+                            if (move_sub == "S"):
+                                S_flag = True
+                            if (move_sub == "W"):
+                                W_flag = True
+                            if self.oppMove[last_move] == move_sub:
+                                print("oppMove!")
+                                #self.move_stack.pop()
+                                break
+                            last_move = move_sub
+                            last_pos = self.traversed[iter]
+                            temp_len = temp_len + 1
+                    #print(last_move)
+                    #if last_move is None:
+                        #print("pop1!")
+                        #self.move_stack.pop()
+                        #continue
+                    if last_move is not None:
+                        print("final!")
+                        #if self.oppMove[last_move] != move:
+                        flag_sum = N_flag + E_flag + S_flag + W_flag
+                        print(flag_sum)
+                        if temp_len > 1 and flag_sum == 4:
+                            if last_pos is not None:
+                                last_pos = (last_pos[0] + dx, last_pos[1] + dy)
+                                print(first_pos)
+                                print(last_pos)
+                                print(temp_len)
+                                #if first_pos == last_pos and temp_len > 1:
+                                if first_pos == last_pos:
+                                    print("pop2!")
+                                    self.move_stack_run.pop()
+                                    return [temp_move, temp_iter - 1]
+                    print("pop3!")
+                    self.move_stack_run.pop()
+            print("here!")
+            print(move)
+            if move == "W":
+                return [False, False]
 
     # function to perform several prior movement removals TODO
-    def multi_pop(self, move_stack, position):
-        # check where the loop starts
-        for iter, move in enumerate(move_stack):
-            if move == position:
-                temp_len = iter + 1
-                break
+    def multi_pop(self, loop_len):
         # remove prior movements to close the loop
-        while len(move_stack) > temp_len:
-            self.move_stack.pop()
+        temp_iter = 0
+        while loop_len > temp_iter:
+            self.move_stack.pop() 
+            #temp_move = self.move_stack.pop()
+            #print(temp_move)
+            temp_iter = temp_iter + 1
 
     # function to move towards the goal tile
     def goal_approach(self, percepts):
@@ -134,6 +271,7 @@ class AI:
             # record position, record movement complement, and perform movement
             self.traversed.append(tuple(self.position))
             self.move_stack.append(self.oppMove["N"])
+            self.move_stack_run.append(self.oppMove["N"])
             self.update_position("N")
             return "N"
         if "r" in percepts["E"]:
@@ -141,6 +279,7 @@ class AI:
             # record position, record movement complement, and perform movement
             self.traversed.append(tuple(self.position))
             self.move_stack.append(self.oppMove["E"])
+            self.move_stack_run.append(self.oppMove["E"])
             self.update_position("E")
             return "E"
         if "r" in percepts["S"]:
@@ -148,6 +287,7 @@ class AI:
             # record position, record movement complement, and perform movement
             self.traversed.append(tuple(self.position))
             self.move_stack.append(self.oppMove["S"])
+            self.move_stack_run.append(self.oppMove["S"])
             self.update_position("S")
             return "S"
         if "r" in percepts["W"]:
@@ -155,6 +295,7 @@ class AI:
             # record position, record movement complement, and perform movement
             self.traversed.append(tuple(self.position))
             self.move_stack.append(self.oppMove["W"])
+            self.move_stack_run.append(self.oppMove["W"])
             self.update_position("W")
             return "W"
         return False
@@ -177,6 +318,7 @@ class AI:
                 # record position, record movement complement, and perform movement
                 self.traversed.append(tuple(self.position))
                 self.move_stack.append(self.oppMove[move])
+                self.move_stack_run.append(self.oppMove[move])
                 self.update_position(move)
                 return move
 
@@ -185,10 +327,31 @@ class AI:
             if self.move_stack and move == "W":
                 #print("backtracking")
                 #print("traversed", self.traversed)
-                # record position, remove prior movement, and perform backtrack
+                # check if agent has performed a loop
+                print(self.move_stack)
                 self.traversed.append(tuple(self.position))
+                
+                if self.loop_check_new(percepts)[0] != False:
+                    print("loop!")
+                    print(self.move_stack)
+                    temp_loop = []
+                    temp_loop = self.loop_check_new(percepts)
+                    print(temp_loop)
+                    #print(temp_loop)
+                    self.multi_pop(temp_loop[1])
+                    #self.traversed.append(tuple(self.position))
+                    self.update_position(temp_loop[0])
+                    print(self.move_stack)
+                    self.move_stack_run.append(self.oppMove[temp_loop[0]])
+                    return temp_loop[0]
+                
+                # record position, remove prior movement, and perform backtrack
+                print("backtrack!")
+                print(self.move_stack)
+                #self.traversed.append(tuple(self.position))
                 backtrack = self.move_stack.pop()
                 self.update_position(backtrack)
+                self.move_stack_run.append(self.oppMove[backtrack])
                 return backtrack
 
         # failsafe return statement, agent is permanently stuck
