@@ -40,10 +40,31 @@ class AI:
         self.turn = 0
         self.valid_moves = ["N", "E", "S", "W"]
         self.oppMove = {"N": "S", "E": "W", "S": "N", "W": "E"}
-        self.direction_To_Coord = {"N": (0, -1), "E": (1, 0), "S": (0, 1), "W": (-1, 0)}
+        self.direction_To_Coord = {
+            "N": (0, -1),
+            "E": (1, 0),
+            "S": (0, 1),
+            "W": (-1, 0),
+            "NE": (1, -1),
+            "NW": (-1, -1),
+            "SE": (1, 1),
+            "SW": (-1, 1),
+        }
+        self.direction_To_Index = {
+            "N": 0,
+            "E": 1,
+            "S": 2,
+            "W": 3,
+            "NE": 4,
+            "NW": 5,
+            "SE": 6,
+            "SW": 7,
+        }
         self.coord_To_Direction = {(0, -1): "N", (1, 0): "E", (0, 1): "S", (-1, 0): "W"}
 
         self.map = {}
+
+        self.unmarked = {}
 
         self.traversed = []
 
@@ -53,42 +74,115 @@ class AI:
 
         self.move_stack = []
 
+    def calculate_position(self, origin, move):
+        dx, dy = self.direction_To_Coord[move]
+        return (origin[0] + dx, origin[1] + dy)
+
+    def map_location(self, percepts):
+        for move in self.valid_moves:
+            base_position = self.position
+            for i in range(len(percepts[move])):
+                base_position = self.calculate_position(base_position, move)
+                self.map[base_position] = percepts[move][i]
+                if base_position not in self.traversed or percepts[move][i] not in "w":
+                    self.unmarked[base_position] = percepts[move][i]
+
+    def cull_tiles(self):
+        copy_dict = self.unmarked.copy()
+        for coord in copy_dict:
+            position_list = []
+            for i in self.direction_To_Coord.keys():
+                if self.calculate_position(coord, i) in self.traversed:
+                    position_list += ["t"]
+                elif self.map.get(self.calculate_position(coord, i), False) == "w":
+                    position_list += ["w"]
+                elif self.map.get(self.calculate_position(coord, i), False) == "g":
+                    position_list += ["g"]
+                else:
+                    position_list += ["u"]
+            if len(position_list) == 8:
+                check_list = [
+                    [["N", "E", "W"], ["SW", "S", "SE"]],
+                    [["N", "E", "S"], ["W", "SW", "NW"]],
+                    [["E", "S", "W"], ["N", "NE", "NW"]],
+                    [["N", "S", "W"], ["E", "NE", "SE"]],
+                    [["N", "E"], ["S", "W", "SW"]],
+                    [["E", "S"], ["N", "W", "NW"]],
+                    [["S", "W"], ["N", "E", "NE"]],
+                    [["N", "W"], ["E", "S", "SE"]],
+                    [["N"], ["E", "SE", "S", "SW", "W"]],
+                    [["E"], ["N", "NW", "W", "SW", "S"]],
+                    [["S"], ["E", "NE", "N", "NW", "W"]],
+                    [["W"], ["N", "NE", "E", "SE", "S"]],
+                ]
+                if all(x in ("g") for x in position_list):
+                    self.traversed.append(coord)
+                    self.unmarked.pop(coord)
+                    if coord in self.visit_queue:
+                        self.visit_queue.remove(coord)
+                    break
+                else:
+                    for i in check_list:
+                        if all(
+                            position_list[self.direction_To_Index.get(x, False)]
+                            in ("t", "w")
+                            for x in i[0]
+                        ):
+                            if (
+                                all(
+                                    position_list[self.direction_To_Index.get(x, False)]
+                                    in ("g")
+                                    for x in i[1]
+                                )
+                                and all(
+                                    self.calculate_position(coord, x)
+                                    not in self.traversed
+                                    for x in i[1]
+                                )
+                            ) or (
+                                self.calculate_position(coord, i[0][0])
+                                == tuple(self.position)
+                                and len(i[0]) == 3
+                            ):
+
+                                self.traversed.append(coord)
+                                self.unmarked.pop(coord)
+                                if coord in self.visit_queue:
+                                    self.visit_queue.remove(coord)
+                                break
+
     def update_position(self, move):
 
         dx, dy = self.direction_To_Coord[move]
         self.position = [self.position[0] + dx, self.position[1] + dy]
 
     def valid_move(self, direction, percepts):
-        print("percepts", percepts)
-        print("direction", direction)
-        print("traversed", self.traversed)
         dx, dy = self.direction_To_Coord[direction]
         new_position = (self.position[0] + dx, self.position[1] + dy)
         if percepts[direction][0] == "w" or new_position in self.traversed:
             return False
-        print("new position", new_position)
         return new_position
 
     def depth_first_search(self, percepts):
+        self.map_location(percepts)
+        self.cull_tiles()
+
         if percepts["X"][0] == "r":
             return "U"
+
         for move in self.valid_moves:
             if self.valid_move(move, percepts):
-                print("valid move")
                 self.traversed.append(tuple(self.position))
-
                 self.move_stack.append(self.oppMove[move])
-
+                self.visit_queue.append(self.calculate_position(self.position, move))
                 self.update_position(move)
-
                 return move
 
             if self.move_stack and move == "W":
-                print("backtracking")
-                print("traversed", self.traversed)
                 self.traversed.append(tuple(self.position))
                 backtrack = self.move_stack.pop()
-
+                if len(self.visit_queue) > 0:
+                    self.visit_queue.pop()
                 self.update_position(backtrack)
 
                 return backtrack
@@ -119,9 +213,7 @@ class AI:
 
         The same goes for goal hexes (0, 1, 2, 3, 4, 5, 6, 7, 8, 9).
         """
-
-        """First, let's make it not hit walls"""
-
+        # time.sleep(100000)
         return self.depth_first_search(percepts)
 
 
