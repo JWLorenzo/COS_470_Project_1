@@ -12,28 +12,6 @@
 #     TODO: find a way to prune tiles that should not be visited
 
 
-"""
-So potential approaches:
-
-We could map it all in a 2d array, but that seems costly
-
-We could use a graph to traverse
-
-Question: If agent is at point g, and end is at point Z, how do we find the optimal path from point g to z if it's all relative to a
-
-We need some form of pathfinding algorithm that can find the lowest cost traversal of known paths from g to z by backtracking
-
-Traveling salesman problem?
-
-Dijkstra's algorithm? 
-"""
-
-import random
-import pprint
-import time
-import numpy as np  # type: ignore
-
-
 class AI:
     # initialize agent parameters
     def __init__(self):
@@ -73,6 +51,8 @@ class AI:
 
         # unused variable to record overall map structure
         self.map = {}
+
+        # variable used by mapping function to keep track of non-traversed nodes
 
         self.unmarked = {}
 
@@ -126,18 +106,24 @@ class AI:
             self.visit_queue.remove(coord)
 
     def prune_tiles(self):
+
         copy_dict = self.unmarked.copy()
         for coord in copy_dict:
             position_list = []
             for i in self.direction_To_Coord.keys():
+
                 if self.calculate_position(coord, i) in self.traversed:
                     position_list += ["t"]
-                elif self.map.get(self.calculate_position(coord, i), False) == "w":
-                    position_list += ["w"]
-                elif self.map.get(self.calculate_position(coord, i), False) == "g":
-                    position_list += ["g"]
+                elif self.map.get(self.calculate_position(coord, i), False) in (
+                    "w",
+                    "g",
+                ):
+                    position_list += [
+                        self.map.get(self.calculate_position(coord, i), False)
+                    ]
                 else:
                     position_list += ["u"]
+
             if len(position_list) == 8:
                 check_list = [
                     [["N", "E", "W", "SE", "SW"], []],
@@ -296,10 +282,12 @@ class AI:
         for move in self.valid_moves:
             if self.valid_move_loop(move, percepts):
                 temp_move = move
-                N_flag = False
-                E_flag = False
-                S_flag = False
-                W_flag = False
+                flag_dict = {
+                    "N_flag": False,
+                    "E_flag": False,
+                    "S_flag": False,
+                    "W_Flag": False,
+                }
                 # assign movement increments and modify position
                 dx, dy = self.direction_To_Coord[temp_move]
                 new_pos = (self.position[0] + dx, self.position[1] + dy)
@@ -315,19 +303,14 @@ class AI:
                     # check if the movements form a loop
                     # no opposing movement indicates a loop
                     temp_len = 0
-                    first_pos = None
-                    last_pos = None
-                    last_move = None
+                    first_pos, last_pos, last_move = (None,) * 3
                     for iter, move_sub in enumerate(self.move_stack_run):
                         if iter == (len(self.move_stack_run) - temp_iter):
-                            if move_sub == "N":
-                                N_flag = True
-                            if move_sub == "E":
-                                E_flag = True
-                            if move_sub == "S":
-                                S_flag = True
-                            if move_sub == "W":
-                                W_flag = True
+
+                            for move in self.valid_moves:
+                                if move_sub == move:
+                                    flag_dict[move + "_flag"] = True
+
                             last_move = move_sub
                             first_pos = self.traversed_loop[iter]
                             temp_len = temp_len + 1
@@ -336,19 +319,18 @@ class AI:
                                 break
                             if self.branch_num[iter] > 0:
                                 break
-                            if move_sub == "N":
-                                N_flag = True
-                            if move_sub == "E":
-                                E_flag = True
-                            if move_sub == "S":
-                                S_flag = True
-                            if move_sub == "W":
-                                W_flag = True
+
+                            for move in self.valid_moves:
+                                if move_sub == move:
+                                    flag_dict[move + "_flag"] = True
+
                             last_move = move_sub
                             last_pos = self.traversed_loop[iter]
                             temp_len = temp_len + 1
                     if last_move is not None:
-                        flag_sum = N_flag + E_flag + S_flag + W_flag
+
+                        flag_sum = sum(flag_dict.values())
+
                         if temp_len > 1 and flag_sum == 4:
                             if last_pos is not None:
                                 last_pos = (last_pos[0] + dx, last_pos[1] + dy)
@@ -425,18 +407,18 @@ class AI:
             return self.goal_approach(percepts)
 
         # iterate through possible movements in order: N E S W
-        for move in self.valid_moves:
+        for move_index in range(len(self.valid_moves)):
             # check movement validity
-            if self.valid_move(move, percepts):
+            if self.valid_move(self.valid_moves[move_index], percepts):
                 # record position, record movement complement, and perform movement
-                self.goal_approach_iteration(percepts, move)
+                self.goal_approach_iteration(percepts, self.valid_moves[move_index])
                 self.loop_flag = False
                 self.backtrack_flag = False
-                return move
+                return self.valid_moves[move_index]
 
             # check to see if all movements have been attempted
             # if backtrack record exists, attempt movement back
-            if self.move_stack and move == "W":
+            if self.move_stack and move_index == 3:
                 self.traversed.append(tuple(self.position))
                 self.traversed_loop.append(tuple(self.position))
                 self.branch_num_max.append(self.branch_check(percepts))
