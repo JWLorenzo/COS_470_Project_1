@@ -11,6 +11,8 @@
 #     TODO: find a way to eliminate apparent loops to bypass backtrack (worldB right side)
 #     TODO: find a way to prune tiles that should not be visited
 
+import time
+
 
 class AI:
     # initialize agent parameters
@@ -96,7 +98,7 @@ class AI:
             for i in range(len(percepts[move])):
                 base_position = self.calculate_position(base_position, move)
                 self.map[base_position] = percepts[move][i]
-                if base_position not in self.traversed or percepts[move][i] not in "w":
+                if base_position not in self.traversed or percepts[move][i] != "w":
                     self.unmarked[base_position] = percepts[move][i]
 
     def update_traversal_maps(self, coord):
@@ -149,25 +151,38 @@ class AI:
                 else:
                     for i in check_list:
                         if all(
-                            position_list[self.direction_To_Index.get(x, False)]
-                            in ("t", "w")
+                            (
+                                position_list[self.direction_To_Index.get(x, False)]
+                                in ("t", "w")
+                            )
+                            and (
+                                self.calculate_position(coord, x)
+                                != tuple(self.position)
+                            )
                             for x in i[0]
                         ):
                             if (
                                 all(
-                                    position_list[self.direction_To_Index.get(x, False)]
-                                    in ("g")
-                                    for x in i[1]
-                                )
-                                and all(
-                                    self.calculate_position(coord, x)
-                                    not in self.traversed
+                                    (
+                                        position_list[
+                                            self.direction_To_Index.get(x, False)
+                                        ]
+                                        == "g"
+                                    )
+                                    and (
+                                        self.calculate_position(coord, x)
+                                        not in self.traversed
+                                    )
+                                    and (
+                                        self.calculate_position(coord, x)
+                                        != tuple(self.position)
+                                    )
                                     for x in i[1]
                                 )
                             ) or (
                                 self.calculate_position(coord, i[0][0])
                                 == tuple(self.position)
-                                and len(i[0]) == 3
+                                and len(i[0]) in range(3, 8)
                             ):
 
                                 self.update_traversal_maps(coord)
@@ -393,9 +408,6 @@ class AI:
 
     # function to perform overall map search algorithm
     def depth_first_search(self, percepts):
-        self.map_location(percepts)
-        self.prune_tiles()
-
         # exit if at goal state
         if percepts["X"][0] == "r":
             return "U"
@@ -486,6 +498,10 @@ class AI:
         """
         # time.sleep(100000)
         # perform depth-first search based on percepts
+        self.map_location(percepts)
+
+        self.prune_tiles()
+
         return self.depth_first_search(percepts)
 
 
