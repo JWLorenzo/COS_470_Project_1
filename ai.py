@@ -1,17 +1,26 @@
 # NAME(S): Jacob Lorenzo and Danila Borodaenko
-#
+# ASSIGNMENT: Project 1
+# SUBMISSION DATE: 9/27/24
+# BENCHMARKS:
+#     WORLD A SCORE: 19
+#     WORLD B SCORE: 787
+#     WORLD C SCORE: 912
 # APPROACH:
 #     The algorithm applied for this project is depth-first search. The agent continuously
 #     maintains a record of its movements and what tiles it has explored, prioritizing new
 #     movements in the following order: N E S W. Movements that put the agent into a wall
 #     are marked invalid, as are movements that go onto already traversed tiles. If no
 #     moves are valid, the agent backtracks until a new valid move arises. If the agent
-#     sees the goal, it moves directly towards it in order to finish the task faster.
+#     sees the goal, it moves directly towards it in order to finish the task faster. We
+#     utilize a pruning algorithm to detect patterns of walls and traversed tiles to eliminate
+#     tile candidates to improve traversal path efficiency. In addition, we utilize a loop detection
+#     algorithm to determine the most efficient path to exit a loop based on traversed tiles and existing
+#     walls. From our observations, it seems that the pruning algorithm takes precedent and can take a route
+#     that would be considered less efficient, but falls within the pruning deduction utilized, so therefore
+#     the pruning algorithm always takes priority.
 #
-#     TODO: find a way to eliminate apparent loops to bypass backtrack (worldB right side)
-#     TODO: find a way to prune tiles that should not be visited
 
-import time
+import time  # Used for testing purposes / map visualization when time.sleep is uncommented
 
 
 class AI:
@@ -436,9 +445,6 @@ class AI:
                 self.branch_num_max.append(self.branch_check(percepts))
                 self.branch_num.append(self.branch_check(percepts))
                 self.branch_recheck(percepts)
-
-                print(self.traversed_loop)
-                print(self.branch_num)
 
                 # check if agent has performed a loop
                 if (
